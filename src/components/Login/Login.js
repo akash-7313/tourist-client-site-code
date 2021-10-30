@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import './Login.css';
 
 const Login = () => {
   const { error, setError, setIsLoading, setUser, signInWithGoogle } = useAuth();
@@ -24,12 +25,11 @@ const Login = () => {
       .finally(() => setIsLoading(false));
   };
 
-  
 
   return (
-    <div className="py-5 d-flex justify-content-center align-items-center">
+    <div className="py-5 d-flex justify-content-center align-items-center login-background">
       <div className="py-5 px-4 text-center shadow rounded-3">
-        <h4 className="mb-3 text-primary">Please Login</h4>
+        <h4 className="mb-3 text-white">Please Login</h4>
         <div className="row mb-3">{error}</div>
         <div>
           <input
@@ -47,11 +47,11 @@ const Login = () => {
           />
           <button className="btn btn-primary my-3">Login</button>
         </div>
-        <span>
-          New user? <NavLink to="/register">Register</NavLink>
+        <span className="text-white">
+          New user? <NavLink to="/register" className="text-warning">Register</NavLink>
         </span>
         <div>------or-------</div>
-        <button onClick={handleGoogleLogin} className="btn btn-secondary mt-2">
+        <button onClick={handleGoogleLogin} className="btn btn-warning mt-2">
           Google Sign-In
         </button>
       </div>

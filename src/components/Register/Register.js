@@ -1,15 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import './Register.css';
 
 const Register = () => {
   
   const { error, signInWithGoogle } = useAuth();
 
   return (
-    <div className="py-5 d-flex justify-content-center align-items-center">
+    <div className="py-5 d-flex justify-content-center align-items-center register-background">
       <div className="py-5 px-4 text-center shadow rounded-3">
-        <h4 className="mb-3 text-primary">Please Register</h4>
+        <h4 className="mb-3 text-white">Please Register</h4>
         <div className="row mb-3">{error}</div>
         <div>
           <input
@@ -34,11 +35,11 @@ const Register = () => {
           />
           <button className="btn btn-primary my-3">Register</button>
         </div>
-        <span>
-          Already have an account? <NavLink to="/login">Login</NavLink>
+        <span className="text-white">
+          Already have an account? <NavLink to="/login" className="text-dark">Login</NavLink>
         </span>
         <div>------or-------</div>
-        <button onClick={signInWithGoogle} className="btn btn-secondary mt-2">
+        <button onClick={signInWithGoogle} className="btn btn-warning mt-2">
           Google Sign-In
         </button>
       </div>

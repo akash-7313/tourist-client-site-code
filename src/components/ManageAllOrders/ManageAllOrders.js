@@ -41,7 +41,11 @@ const ManageAllOrders = () => {
     <div className="manageorder-background py-5">
       <div className="container py-5">
         <div className="py-5">
-          <h3 className="text-center text-white">Manage All Orders</h3>
+          <div className="text-center">
+            <h3 className="text-white d-inline-block border-bottom border-3">
+              Manage All Orders
+            </h3>
+          </div>
           <Table responsive variant="dark" className="my-3">
             <thead>
               <tr>
