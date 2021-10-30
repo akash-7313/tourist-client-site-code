@@ -1,0 +1,8 @@
+.order-background{
+    background-image: linear-gradient(to bottom, #f3f4fb10, #76135d70),
+    url("../../images/orders/order.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

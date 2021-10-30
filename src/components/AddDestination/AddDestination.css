@@ -1,0 +1,11 @@
+.addestination-background{
+    background-image: linear-gradient(to bottom, #f3f4fb10, #76135d70),
+    url("../../images/add-destination/destination.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.destinationText-color{
+    color: #9de21d;
+}

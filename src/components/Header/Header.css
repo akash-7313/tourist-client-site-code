@@ -1,0 +1,18 @@
+.banner{
+    background-image: linear-gradient(to bottom, #f5f6fc1c, #75135dba),
+    url("../../images/banner/Optimized-banner.jpg");
+    height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text-size{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width:688px) {
+  .text-size{
+    font-size: 60px;
+    font-weight: 600;
+  }
+}

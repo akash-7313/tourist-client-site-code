@@ -1,0 +1,14 @@
+.footer-banner{
+    background-image: linear-gradient(to bottom, #f3f4fb10, #76135d70),
+    url("../../images/footer/footer-banner-main.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-bg{
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16.3px);
+-webkit-backdrop-filter: blur(16.3px);
+}
