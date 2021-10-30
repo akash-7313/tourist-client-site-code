@@ -44,16 +44,16 @@ const Header = () => {
                 <NavLink
                   className="text-decoration-none me-4 text-primary py-2"
                   exact
-                  to="/blogs"
+                  to="/bestDestination"
                 >
-                  Blogs
+                  Best Destination
                 </NavLink>
                 <NavLink
                   className="text-decoration-none me-4 text-primary py-2"
                   exact
-                  to="/about"
+                  to="/blogs"
                 >
-                  About
+                  Blogs
                 </NavLink>
 
                 {user?.email && (
