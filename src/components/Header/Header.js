@@ -136,7 +136,7 @@ const Header = () => {
         <div className="py-5">
           <div className="py-5">
             <div className="py-5 text-center">
-              <h1 className="text-white text-size">SWISS</h1>
+              <h1 className="text-white text-style">SWISS</h1>
               <p className="text-white">Dream, Explore, Discover</p>
               <button className="mb-5 btn btn-sm btn-warning rounded-pill px-5 ">
                 GO

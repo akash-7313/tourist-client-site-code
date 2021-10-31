@@ -7,6 +7,7 @@ const Testimonials = () => {
   return (
     <div className="testimonial-banner">
       <div className="container">
+        <h3 className="text-center pt-5 text-primary">Our Happy Client's Says</h3>
         <Row xs={1} md={3} className="g-4 py-5 px-3">
           <Col className="text-white text-center p-5 background">
             <Card.Img

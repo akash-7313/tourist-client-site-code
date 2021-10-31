@@ -38,7 +38,7 @@ const Footer = () => {
                 travel per year, 70% of which is done online.
               </p>
               <div>
-                <h5 className="text-secondary">Contuct info</h5>
+                <h5 className="text-secondary">Contuct us</h5>
                 <p>24/7 Chat Suppoet</p>
                 <p>contacts@touristo.com</p>
                 <p>+15-840-8888-000</p>
@@ -101,8 +101,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center mt-3 pt-3 border-top border-secondary">
-            <p className="text-dark">
-              &#xA9; 2021 Company, Inc. All rights reserved.
+            <p className="text-warning">
+              &#xA9; 2021 TouristO Company, Inc. All rights reserved.
             </p>
           </div>
         </footer>
