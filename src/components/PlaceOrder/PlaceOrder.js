@@ -26,6 +26,7 @@ const PlaceOrder = () => {
   //   console.log(singleDestination);
 
   const onSubmit = (data) => {
+    data.status = 'pending';
     console.log(data);
 
     fetch("https://powerful-anchorage-66820.herokuapp.com/orders", {

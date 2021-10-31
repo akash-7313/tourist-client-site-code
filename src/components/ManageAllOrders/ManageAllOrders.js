@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import "./ManageAllOrders.css";
 
 const ManageAllOrders = () => {
@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
       .then((res) => res.json())
       .then((result) => setOrders(result));
   }, []);
-    // console.log(orders);
+    
 
   // delete order
   const handleDeleteOrder = (id) => {
@@ -33,10 +33,32 @@ const ManageAllOrders = () => {
           }
         });
       };
-    };
+  };
+  
+
+  // update status
+  const handleUpdateOrderStatus = (id) => {
+    // console.log(id);
+    const data = {};
+    data.status = 'approved';
+    // console.log(data);
+
+    fetch(`https://powerful-anchorage-66820.herokuapp.com/update/${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        // console.log(result);
+        if (result.modifiedCount > 0) {
+          alert('Order Approved Successfully');
+        }
+      });
+  }
+
+  // console.log('orders',orders);
     
-
-
   return (
     <div className="manageorder-background py-5">
       <div className="container py-5">
@@ -56,6 +78,7 @@ const ManageAllOrders = () => {
                 <th>Tourist</th>
                 <th>Address</th>
                 <th>Phone</th>
+                <th>Status</th>
                 <th></th>
               </tr>
             </thead>
@@ -69,6 +92,12 @@ const ManageAllOrders = () => {
                   <td>{order?.name}</td>
                   <td>{order?.address}</td>
                   <td>{order?.phone}</td>
+
+                  <td onClick={() => handleUpdateOrderStatus(order._id)}>
+                    <Button variant="outline-warning" size="sm">
+                      {order?.status}
+                    </Button>
+                  </td>
 
                   <td onClick={() => handleDeleteOrder(order._id)}>
                     <i className="far fa-trash-alt" style={deleteStyle}></i>

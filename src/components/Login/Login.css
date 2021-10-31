@@ -1,6 +1,6 @@
-.login-background{
+.login-background {
     background-image: linear-gradient(to bottom, #f3f4fb10, #76135d70),
-    url("../../images/login/mountain_login.jpg");
+    url("../../images/register/mountain1.jpg");
   height: 100%;
   background-position: center;
   background-size: cover;

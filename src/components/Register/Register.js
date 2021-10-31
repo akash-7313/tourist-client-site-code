@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import './Register.css';
 
+
 const Register = () => {
   
   const { error, signInWithGoogle } = useAuth();
