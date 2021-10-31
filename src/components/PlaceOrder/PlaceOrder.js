@@ -14,9 +14,7 @@ const PlaceOrder = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
-    defaultValues: singleDestination,
-  });
+  } = useForm();
 
   useEffect(() => {
     const url = `https://powerful-anchorage-66820.herokuapp.com/allDestination/${destinationId}`;

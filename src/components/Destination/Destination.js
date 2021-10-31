@@ -1,15 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Row, Spinner } from "react-bootstrap";
 import DestinationDetails from "../DestinationDetails/DestinationDetails";
 
 const Destination = () => {
   const [destination, setDestination] = useState([]);
+  const [isLoadingData, setIsLoadingData] = useState(true);
 
   useEffect(() => {
+    setIsLoadingData(true);
     fetch("https://powerful-anchorage-66820.herokuapp.com/allDestination")
       .then((res) => res.json())
-      .then((data) => setDestination(data));
+      .then((data) => {
+        setDestination(data);
+        setIsLoadingData(false);
+      });
   }, []);
+
+  if (isLoadingData) {
+    return (
+      <div className="text-center my-5 py-5">
+        <Spinner className="my-5" animation="border" variant="primary" />
+      </div>
+    );
+  }
+
 
   return (
     <div className="container my-5">
